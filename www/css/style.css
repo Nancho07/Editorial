@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/*
+ * jQuery File Upload Plugin CSS Example
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+/*body {
+  padding-top: 60px;
+}*/
+
+.caja{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 30;
+    background: inherit;
+    color: inherit;
+    border-color: #303030;
+}
+.caja_chica{
+    vertical-align: middle;
+    width:30%;
+    height:auto;
+    margin-top: 5px;
+    margin-right: 4px;
+}
+.small_img{
+    height: 50px;
+}
+.li_item {
+  color: black;
+}
+.list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  background-color: #fff;
+  margin: 0 -10px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.list li {
+  display: block;
+  list-style: none;
+  position: relative;
+  padding: 10px 10px 10px 5px;
+  border-bottom: 1px solid #ccc;
+  background: inherit;
+}
+.list li:first-child {
+  /*   border-top: 1px solid #ccc;*/
+}
+.list > li > a {
+  position: relative;
+  display: block;
+  color: inherit;
+  margin: -20px -20px -20px -10px;
+  text-decoration: none;
+  padding: 20px 20px 20px 10px;
+}
+
+[data-role="header"] {
+    position: fixed;
+    top: 0px;
+    /*height: 20px;*/
+    width: 100%;
+    /*background: green;*/
+}
+
+#page_43_69{
+   top: 20px; 
+}
+
+#mainpage {
+    /*background: #444;*/
+  }
+/*h1 {
+    font-size: 38px;
+    font-style: italic;
+    color: #333;
+    padding: 10px;
+    text-shadow: -1px -1px 0px #101010, 1px 1px 0px #505050;
+  }*/
+
+h1 {
+color: #323133;
+ font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+letter-spacing: -1px;
+text-decoration: none; 
+text-shadow: 1px 1px #fff, 0 0 #0e0e0e, 2px 3px 1px #e3e3e3; 
+text-transform: none; 
+word-spacing: -2px;
+}
+.div-logo{
+    margin-top: 10px;
+}
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-text)
+}
+#upload-input {
+  display: none;
+}
+/*.upload-btn {
+  color: #ffffff;
+  background-color: #F89406;
+  border: none;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn:active,
+.upload-btn.active {
+  color: #ffffff;
+  background-color: #FA8900;
+  border: none;
+}*/

@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+    <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="css/jQMProgressBar.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+    <!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+
+    <script src="intelxdk.js"></script>
+    <script src="js/imixio.js"></script>
+    <script src="cordova.js"></script>
+    <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtJ1rTLdg5CeOfVMZLk-XpGdtwq5fhABY&amp;sensor=true"></script>
+    <!--<script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM_6TofYTZjjSIlYErLo5VkEzPp_MPW2M&amp;sensor=true"></script>-->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?sensor=true" async="" defer=""></script>-->
+    <!--;sensor=false-->
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+
+    <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+    <!--<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+    <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+    <script type="application/javascript" src="js/jQMProgressBar.js"></script>
+    <script type="application/javascript" src="js/md5.js"></script>
+    <script type="application/javascript" src="js/init-app.js"></script>
+    <script type="application/javascript" src="js/app.js"></script>
+    <script type="application/javascript" src="google_maps/google_maps.js"></script>
+
+    <!--<script type="application/javascript" src="sidebar/js/hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>-->
+    <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+    <!--<script type="application/javascript" src="app_framework/themeRelease.js"></script>-->
+    <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+    <script type="application/javascript" src="camera/cordova-cam.js"></script>
+
+    <script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script type="application/javascript" src="xdk/ad/jqm_subpage.js"></script>
+    <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+    <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+
+    <script type="application/javascript" src="popup/popup.min.js"></script>
+  </head>
+
+  <body>
+    <div class="upage ui-page-theme-a" id="mainpage" data-role="page">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_83" data-uib="jquery_mobile/header" data-ver="0" data-position="fixed">
+          <div class="widget-container wrapping-col single-centered">
+            <span align="center" class="col-xs-12">
+                    <img id="btnSenal0" src="images/header-imix.png" style="vertical-align:middle;">
+                </span>
+          </div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_17_39">
+          <div align="center" class="text-container">
+            <!--<h2>IMIX-EDITORIAL</h2>-->
+          </div>
+          <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+              <div align="center" class="div-logo col-mg-12">
+                <span align="center" class="col-xs-12">
+                    <img id="btnSenal0" src="images/conjunto.png" width="80%" style="vertical-align:middle;">
+                </span>
+              </div>
+              <div class="widget-container content-area vertical-col">
+                <div class="table-thing with-label widget uib_w_1 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                  <label class="narrow-control label-inline" for="user">Usuario</label>
+                  <input class="wide-control" placeholder="Nombre de usuario" type="text" id="user" name="user" value="">
+                </div>
+                <div class="table-thing with-label widget uib_w_2 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                  <label class="narrow-control label-inline" for="pass">Clave</label>
+                  <input class="wide-control" placeholder="Clave de acceso" type="password" id="pass" name="pass" value="">
+                </div>
+                <div align="center">
+                  <button class="widget uib_w_3 d-margins button_green RoundAccess" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="lock" data-theme="b" id="enviar" data-iconpos="notext">Acceso</button>
+                </div>
+                <div class="widget uib_w_87 ui-content no_wrap d-margins outset-margin" data-uib="jquery_mobile/listview" data-ver="0" id="descripcion">
+                  <ol data-role="listview" id="description" data-theme="b">
+                    <li class="widget uib_w_88" data-uib="jquery_mobile/listitem" data-ver="0" data-role="list-divider"><span>Descripción</span>
+                    </li>
+                  </ol>
+                </div>
+                <div id="bienvenido"></div>
+                <span class="uib_shim"></span>
+              </div>
+            </div>
+            <span class="uib_shim"></span>
+          </div>
+        </div>
+        <div class="inner-element uib_w_149 uib_sidebar leftbar bar-bg" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="panelPrincipal">
+          <div class="sidebar-content content-area vertical-col">
+
+            <a class="widget uib_w_150 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnPru">Config</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="upage ui-page-theme-a" id="datos1" data-role="page">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_13" data-uib="jquery_mobile/header" data-ver="0">
+          <h1></h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left">
+            <a href="#panel1" class="widget uib_w_65 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" data-icon="bullets" data-inline="true" id="bpanel1">Panel</a>
+          </div>
+          <div class="widget-container content-area horiz-area wrapping-col right"><a class="widget uib_w_79 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="guardar_local" data-mini="true">Datos locales</a>
+            <a class="widget uib_w_89 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="nuevo_registro">Nuevo reg.</a>
+          </div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_43_69">
+          <div class="grid grid-pad urow uib_row_4 row-height-4" data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_4 col-0_12-12 caja_datos" data-uib="layout/col" data-ver="0">
+              <div class="widget-container content-area vertical-col left">
+                <div class="table-thing with-label widget uib_w_6 d-margins" data-uib="jquery_mobile/select" data-ver="0">
+                  <label class="narrow-control label-top-left">Categoría</label>
+                  <div data-role="fieldgroup" class+="" "wide-control"="">
+                    <select data-theme="b" data-iconpos="left" name="catego" id="catego" data-mini="true"></select>
+                  </div>
+                </div>
+                <div class="table-thing with-label widget uib_w_4 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                  <label class="narrow-control label-top-left" for="lugar_k">Código</label>
+                  <input class="wide-control" type="text" placeholder="Numero registro" id="lugar_k" name="lugar_k" value="0" readonly="">
+                </div>
+                <div class="table-thing with-label widget uib_w_4 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                  <label class="narrow-control label-top-left" for="local">Nombre</label>
+                  <input class="wide-control" type="text" placeholder="Establecimiento" id="local" name="local">
+                </div>
+                <div class="table-thing with-label widget uib_w_5 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                  <label class="narrow-control label-top-left" for="contacto">Contacto</label>
+                  <input class="wide-control" placeholder="Nombre del contacto" type="text" id="contacto" name="contacto" data-mini="true">
+                </div>
+                <div class="table-thing with-label widget uib_w_7 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                  <label class="narrow-control label-top-left" for="telefono">Teléfono</label>
+                  <input class="wide-control" placeholder="Telefono del contacto" type="tel" name="telefono" id="telefono" data-mini="true">
+                </div>
+                <div class="table-thing with-label widget uib_w_8 d-margins" data-uib="jquery_mobile/textarea" data-ver="0">
+                  <label class="narrow-control label-top-left" for="direccion">Dirección</label>
+                  <textarea class="wide-control" placeholder="Dirección y observaciones" rows="5" wrap="hard" name="direccion" id="direccion" data-mini="true"></textarea>
+                </div>
+                <div class="sbs-container widget uib_w_82 d-margins longLatsides" data-uib="layout/side_by_side" data-ver="0" style="display=none">
+                  <div class="leftContent widget-container">
+                    <label class="narrow-control label-top-left" for="latitud">Latitud</label>
+                    <input class="wide-control" placeholder="Latitud" type="number" id="latitud" data-mini="true" readonly="">
+                  </div>
+                  <div class="rightContent widget-container">
+                    <label class="narrow-control label-top-left" for="longitud">Longitud</label>
+                    <input class="wide-control" placeholder="Longitud" type="number" id="longitud" data-mini="true" readonly="">
+                  </div>
+                </div>
+                <span class="uib_shim"></span>
+              </div>
+            </div>
+            <span class="uib_shim"></span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-element uib_w_1 uib_sidebar leftbar bar-bg thumb-bg bar-gutter fixed" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}" id="panel1">
+        <div class="sidebar-content content-area vertical-col">
+          <a href="#geo_datos" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="edit">Editorial</a>
+          <a href="#galeria" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="d" data-icon="camera">Galerias</a>
+          <a href="#upload" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="d" data-icon="bullets">Notas</a>
+          <a class="widget uib_w_66 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="close" data-icon="arrow-l">Cerrar</a>
+          <a href="#mapa" class="widget uib_w_81 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="location">Mapa</a>
+        </div>
+      </div>
+    </div>
+    <!-- GEO DATOS -->
+    <div class="upage ui-page-theme-a pageGeodatos" id="geo_datos" data-role="page">
+      <!-- GEO DATOS ENCABEZADO-->
+      <div data-role="header" class="container-group inner-element uib_w_13" data-uib="jquery_mobile/header" data-ver="0" data-position="fixed">
+        <h1></h1>
+        <div class="widget-container wrapping-col single-centered">
+        </div>
+        <div class="widget-container content-area horiz-area wrapping-col left"><a class="widget uib_w_67 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="bullets" id="bpanel2">Panel</a>
+        </div>
+        <div class="widget-container content-area horiz-area wrapping-col right">
+
+        </div>
+      </div>
+      <!-- GEO DATOS CUERPO-->
+      <div class="upage-outer content-area vertical-col left">
+        <div class="upage-content ac0 content-area vertical-col" id="page_6_46">
+          <div class="grid grid-pad urow uib_row_5 row-height-5 " data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_5 col-0_12-12 editorColorBg" data-uib="layout/col" data-ver="0">
+              <div class="widget-container content-area vertical-col">
+                <div class="sbs-container widget uib_w_137 d-margins" data-uib="layout/side_by_side" data-ver="0">
+                  <div align="center" class="leftContent widget-container">
+                    <div class="table-thing with-label widget uib_w_128 widthCategoEstado MarginCategoEstado" data-uib="jquery_mobile/select" data-ver="0">
+                      <label class="narrow-control label-top-left">Categorías</label>
+                      <div data-role="fieldgroup" class="wide-control">
+                        <select id="categoriaEditorial">
+                          <option>Categoría 1</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div align="center" class="rightContent widget-container">
+                    <div class="table-thing with-label widget uib_w_138 d-margins widthCategoEstado" data-uib="jquery_mobile/select" data-ver="0">
+                      <label class="narrow-control label-top-right">Estado</label>
+                      <div data-role="fieldgroup" class="wide-control">
+                        <select id="estadosEditorial">
+                          <option>Estado 1</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sbs-container widget uib_w_162 d-margins anchoIdTituloNota" data-uib="layout/side_by_side" data-ver="0" id="idTituloNota">
+                  <div class="leftContent widget-container">
+                    <div class="table-thing with-label widget uib_w_163 d-margins nota_kId" data-uib="jquery_mobile/input" data-ver="0">
+                      <label class="narrow-control label-top-left" for="nota_k">ID</label>
+                      <input class="wide-control" type="number" id="nota_k" readonly="" value="0">
+                    </div>
+                  </div>
+                  <div class="rightContent widget-container">
+                    <div class="table-thing with-label widget uib_w_140 d-margins tituloNotaWidth" data-uib="jquery_mobile/input" data-ver="0">
+                      <label class="narrow-control label-top-left" for="tituloMovil">Titulo</label>
+                      <input class="wide-control" placeholder="Título de la nota" type="text" id="tituloMovil">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-thing with-label widget uib_w_126 d-margins inputFotoPortada" data-uib="jquery_mobile/input" data-ver="0">
+                  <label class="narrow-control label-top-left" for="fotoPortada">Foto Portada</label>
+                  <input class="wide-control" placeholder="Foto portada" type="text" id="fotoPortada" readonly="" style="display:none;">
+                </div>
+                <div align="center" class="widget uib_w_136 scale-image d-margins" data-uib="media/img" data-ver="0">
+                  <figure class="figure-align fotoPortada" id="fotoPortadaImage">
+                    <img src="images/presionar.png" id="fotoPortadaImg">
+
+                    <figcaption data-position="bottom"></figcaption>
+                  </figure>
+                </div><span class="uib_shim"></span>
+              </div>
+            </div>
+            <span class="uib_shim"></span>
+          </div>
+          <!--<div class="widget-container content-area vertical-col">-->
+          <div class="grid grid-pad urow uib_row_17 row-height-17" data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_19 col-1_12-12 editorBg bgBotoneraEdicion" data-uib="layout/col" data-ver="0">
+              <!-- INICIO PRIMERA BARRA DE EDICION -->
+              <div class="uib-button-bar default-button-bar-height widget uib_w_94 d-margins grupoBtn0" data-uib="media/button_bar" data-ver="0">
+
+                <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_97 btnEditorSize btnEditorMargenes colorSelect" data-uib="media/graphic_button" data-ver="0" href="#"
+                id="backGroundBtn">
+                  <img src="images/editor/fondo.png">
+
+                  <span class="uib-caption"></span>
+                </a>
+                <!--<a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_97 btnEditorSize btnEditorMargenes media-button-text-bottom colorSelect" data-uib="jquery_mobile/button"
+                data-ver="0" href="#" id="fonColorBtn">
+                  <img src="images/editor/icon.png">
+                  <span class="uib-caption">.</span>
+                  </a>-->
+                <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_113 btnEditorSize btnEditorMargenes colorSelect" data-uib="media/graphic_button" data-ver="0" href="#"
+                id="fonColorBtn">
+                  <img src="images/editor/color-texto.png">
+
+                  <span class="uib-caption"></span>
+                </a>
+                <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_97 btnEditorSize btnEditorMargenes glyphicon-font" data-uib="jquery_mobile/button" data-ver="0" href="#"
+                id="fontMasBtn">
+                  <img src="images/editor/icon.png">
+                  <span class="uib-caption">.</span>
+                </a>
+                <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_97 btnEditorSize btnEditorMargenes media-button-text-bottom" data-uib="media/graphic_button" data-ver="0"
+                href="#" id="htmlBtn">
+                  <img src="images/editor/html.png">
+                  <span class="uib-caption">.</span>
+                </a>
+                <a onclick="salvarTexto()" class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_97 btnEditorSize btnEditorMargenes media-button-text-bottom" data-uib="media/graphic_button"
+                data-ver="0" href="#" id="saveBtn">
+                  <img src="images/editor/guardar.png">
+                  <span class="uib-caption">.</span>
+                </a>
+              </div>
+              <!-- FIN PRIMERA BARRA DE EDICION -->
+              <!-- INICIO SEGUNDA BARRA DE EDICION -->
+              <div class="uib-button-bar default-button-bar-height widget uib_w_110 d-margins" data-uib="media/button_bar" data-ver="0">
+                <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_111 btnEditorMargenes btnEditorSize fotoPortada" data-uib="media/graphic_button" data-ver="0" href="#"
+                id="fotoContenidoImage">
+                  <img src="images/editor/insert-img.png">
+
+                  <span class="uib-caption"></span>
+                </a>
+
+                <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_113 btnEditorSize btnEditorMargenes" data-uib="media/graphic_button" data-ver="0" href="#" id="btnConfiguracionEditorial">
+                  <img src="images/editor/configuracion.png">
+
+                  <span class="uib-caption"></span>
+                </a>
+                <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_113 btnEditorSize btnEditorMargenes" data-uib="media/graphic_button" data-ver="0" href="#" id="linkear">
+                  <img src="images/editor/link.png">
+                  <span class="uib-caption"></span>
+                </a>
+                <a class="uib-graphic-button default-graphic-sizing default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_172 btnEditorSize btnEditorMargenes" data-uib="media/graphic_button" data-ver="0"
+                href="#" id="btnNotificacion">
+                  <img src="images/editor/notification0.png">
+                  <span class="uib-caption"></span>
+                </a>
+                <a class="uib-graphic-button default-graphic-sizing default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_173 btnEditorSize btnEditorMargenes" data-uib="media/graphic_button" data-ver="0"
+                href="#" id="btnConfigNuevo0">
+                  <img src="images/editor/nuevo0.png">
+
+                  <span class="uib-caption"></span>
+                </a>
+              </div>
+              <!-- FIN SEGUNDA BARRA DE EDICION -->
+            </div>
+            <div class="grid grid-pad urow uib_row_5 row-height-5 TextEditorPaddind marginTextEditor editorBg" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_19 col-1_12-12 marginTextEditor areatextoEditodBgColor" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <!-- EDITOR HTML -->
+                  <!--<div class="table-thing with-label widget uib_w_122 d-margins" data-uib="jquery_mobile/textarea" data-ver="0">
+                    <label class="narrow-control label-top-left" for="edithtml">Editor HTML</label>
+                    <textarea class="wide-control" rows="8" wrap="hard" id="edithtml" style="display:none; height:200px;"></textarea>
+                  </div>-->
+                  <!-- EDITOR AREA -->
+                  <textarea class="wide-control" rows="8" wrap="hard" id="edithtml" style="display:none"></textarea>
+                  <div id="editor" class="editor" contenteditable="true" spellcheck="true" data-text="Inicia la edicion de tu nota aquí">
+
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+                <span class="uib_shim"></span>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+          <!--<div data-role="controlgroup" class="uib-jqm-flex widget uib_w_17 d-margins" data-uib="jquery_mobile/button_group" data-ver="0" data-type="horizontal">
+            <a class="widget uib_w_18" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="refresh" data-theme="b" data-mini="true" onclick="refreshMapa()" id="refrescar" data-inline="true">Refrescar</a>
+            <a class="widget uib_w_19" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" data-icon="forward" id="cargar_mapa" data-inline="true">Cargar</a>
+            <a class="widget uib_w_20" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-mini="true" data-icon="check" id="guardar" data-inline="true">Guardar</a>
+          </div>-->
+          <!-- </div>vertical col-->
+          <div class="widget scale-image uib_w_12 d-margins sizing" data-uib="media/img" data-ver="0">
+            <label class="narrow-control label-top-left" for="latitud">Cargar Imagenes</label>
+            <figure class="figure-align">
+              <figcaption data-position="top"></figcaption>
+
+              <img src="images/muestra.png" id="IMAGES">
+            </figure>
+          </div>
+          <div align="center" id="progressbar" class="progress-bar" role="progressbar"></div>
+          <!--<input type="button" id="msg" value="En espera..."/>-->
+          <div id="msg" style="width:90%; height:30px; margin-top:15px;" data-theme="d" align="center">Esperando</div>
+          <!-- /jquery progress bar -->
+          <div class="table-thing with-label widget uib_w_34 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+            <label class="narrow-control label-top-left" for="nombreImg">Título de la imagen</label>
+            <input class="wide-control" placeholder="Título de la imagen" type="text" data-mini="true" id="nombreImg" name="nombreImg">
+          </div>
+
+          <div class="sbs-container widget uib_w_31 d-margins" data-uib="layout/side_by_side" data-ver="0">
+            <div data-role="controlgroup" class="uib-jqm-flex widget uib_w_17 d-margins" data-uib="jquery_mobile/button_group" data-ver="0" data-type="horizontal" id="btnMap">
+              <a class="widget uib_w_12 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" onclick="captureAndSavePhoto('.uib_w_12 img')" id="camara1" data-icon="camera" data-theme="b" data-mini="true">Camara</a>
+              <a class="widget uib_w_12 d-margins upload-btn" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="a" data-mini="true" onclick="getImage(navigator.camera.PictureSourceType.SAVEDPHOTOALBUM)">Dispositivo</a>
+              <!-- <button class="btn btn-lg upload-btn" type="button">Dispositivo</button>-->
+              <input id="upload-input" type="file" name="uploads[]" multiple="multiple">
+            </div>
+          </div>
+          <!--<div class="widget uib_w_121 maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8" id="map"></div>-->
+        </div>
+        <div class="inner-element uib_w_98 uib_sidebar rightbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/right_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'right', 'dur':200}" id="panelConfigEditorial">
+          <div class="sidebar-content content-area vertical-col">
+
+            <div class="grid grid-pad urow uib_row_7 row-height-7" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_7 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="sbs-container widget uib_w_166 d-margins" data-uib="layout/side_by_side" data-ver="0">
+                    <div class="leftContent widget-container"><a onclick="fontsize('1')" class="widget uib_w_100" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="fs1">1</a>
+                    </div>
+                    <div class="rightContent widget-container"><a onclick="fontsize('2')" class="widget uib_w_100" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="fs1">2</a>
+                    </div>
+                  </div>
+                  <div class="sbs-container widget uib_w_167 d-margins" data-uib="layout/side_by_side" data-ver="0">
+                    <div class="leftContent widget-container"><a onclick="fontsize('3')" class="widget uib_w_101" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="fs2">3</a>
+                    </div>
+                    <div class="rightContent widget-container"><a onclick="fontsize('4')" class="widget uib_w_102" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="fs4">4</a>
+                    </div>
+                  </div>
+                  <div class="sbs-container widget uib_w_168 d-margins" data-uib="layout/side_by_side" data-ver="0">
+                    <div class="leftContent widget-container"><a onclick="fontsize('5')" class="widget uib_w_102" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="fs4">5</a>
+                    </div>
+                    <div class="rightContent widget-container"><a onclick="fontsize('6')" class="widget uib_w_102" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="fs4">6</a>
+                    </div>
+                  </div>
+                  <div data-role="controlgroup" class="uib-jqm-flex widget uib_w_99 d-margins" data-uib="jquery_mobile/button_group" data-ver="0">
+
+                    <a onclick="fontsize('7')" class="widget uib_w_102" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="fs4">7</a>
+                  </div>
+                  <div class="sbs-container widget uib_w_169 d-margins" data-uib="layout/side_by_side" data-ver="0">
+                    <div class="leftContent widget-container">
+                      <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_112 btnEditorMargenes btnEditorText" data-uib="media/graphic_button" data-ver="0" href="#" id="jlBtn">
+                        <img src="images/editor/justify_1.png">
+
+                        <span class="uib-caption"></span>
+                      </a>
+                    </div>
+                    <div class="rightContent widget-container">
+                      <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_111 btnEditorMargenes btnEditorText" data-uib="media/graphic_button" data-ver="0" href="#" id="jrBtn">
+                        <img src="images/editor/justify_2.png">
+
+                        <span class="uib-caption"></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="sbs-container widget uib_w_170 d-margins" data-uib="layout/side_by_side" data-ver="0">
+                    <div class="leftContent widget-container">
+                      <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_113 btnEditorMargenes btnEditorText" data-uib="media/graphic_button" data-ver="0" href="#" id="jcBtn">
+                        <img src="images/editor/justify_3.png">
+
+                        <span class="uib-caption"></span>
+                      </a>
+                    </div>
+                    <div class="rightContent widget-container">
+                      <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_112 btnEditorMargenes btnEditorText" data-uib="media/graphic_button" data-ver="0" href="#" id="jAll">
+                        <img src="images/editor/justify_4.png">
+
+                        <span class="uib-caption"></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="sbs-container widget uib_w_171 d-margins" data-uib="layout/side_by_side" data-ver="0">
+                    <div class="leftContent widget-container">
+                      <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_96 btnEditorMargenes btnEditorText" data-uib="media/graphic_button" data-ver="0" href="#" id="boldBtn">
+                        <img src="images/editor/bold-32.png">
+
+                        <span class="uib-caption"></span>
+                      </a>
+                    </div>
+                    <div class="rightContent widget-container">
+                      <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_95 btnEditorMargenes btnEditorText" data-uib="media/graphic_button" data-ver="0" href="#" id="underLineBtn">
+                        <img src="images/editor/subrayado.png">
+
+                        <span class="uib-caption"></span>
+                      </a>
+                    </div>
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+
+            <div class="grid grid-pad urow uib_row_9 row-height-9" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_9 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <a class="widget uib_w_103 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="closeConfig">Cerrar</a><span class="uib_shim"></span>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+        </div>
+        <div class="inner-element uib_w_108 uib_sidebar rightbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/right_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':300, 'side':'right', 'dur':200}" id="colorPickerBox">
+          <div class="sidebar-content content-area vertical-col">
+
+            <div class="grid grid-pad urow uib_row_12 row-height-12" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_13 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col" id="colorBox">
+                  <div class="table-thing with-label widget uib_w_124 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                    <label class="narrow-control" for="tituloColor"></label>
+                    <input class="wide-control" type="text" id="tituloColor" readonly="">
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+
+            <div class="grid grid-pad urow uib_row_13 row-height-13" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_14 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="center">
+                    <canvas id="colorpick" width="250" height="220"></canvas>
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+
+            <div class="grid grid-pad urow uib_row_14 row-height-14" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_15 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col"><a class="widget uib_w_109 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="closeColorPickerBox">Cerrar</a>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+        </div>
+        <div class="inner-element uib_w_114 uib_sidebar rightbar bar-bg thumb-bg bar-gutter fixed" data-uib="layout/right_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':300, 'side':'right', 'dur':200}" id="imagesEditor">
+          <div class="sidebar-content content-area vertical-col">
+
+            <div class="grid grid-pad urow uib_row_15 row-height-15" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_17 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col cargar_imagenes"><a class="widget uib_w_123 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="editorCargaImg" data-icon="camera">Cargar IMG</a>
+                  <a class="widget uib_w_115 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="cerrarImgEditor">Cerrar</a>
+                  <div class="table-thing with-label widget uib_w_135 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                    <label class="narrow-control" for="tituloFoto"></label>
+                    <input class="wide-control" type="text" id="tituloFoto" readonly="">
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+
+            <div class="grid grid-pad urow uib_row_16 row-height-16" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_18 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="card_grid widget uib_w_116 wrapping-col d-margins flex-basis-116" data-uib="layout/card_grid" data-ver="0" id="cuadrosImgEditor">
+                    <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_117 section-dimension-117" data-uib="layout/card" data-ver="0"></div>
+                    <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_118 section-dimension-118" data-uib="layout/card" data-ver="0"></div>
+                    <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_119 section-dimension-119" data-uib="layout/card" data-ver="0"></div>
+                    <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_120 section-dimension-120" data-uib="layout/card" data-ver="0"></div>
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- vertical col-->
+      <div class="inner-element uib_w_1 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe fixed" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}" id="panel2">
+        <div class="sidebar-content content-area vertical-col">
+
+          <a class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="d" data-icon="bullets" id="btnConfigEditorial">Config.</a>
+          <a class="widget uib_w_68 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="arrow-l" id="close2">Cerrar</a>
+        </div>
+      </div>
+      <div class="outer-element uib_w_130 uib_crossbar botbar fixed bar-bg thumb-bg bar-gutter swipe" data-uib="layout/bottom_crossbar" data-ver="1" data-anim="{'style':'overlap', 'v':400, 'side':'bottom', 'dur':200}" id="panelConfigEditorial0">
+        <div class="sidebar-content content-area vertical-col">
+
+          <div class="grid grid-pad urow uib_row_18 row-height-18" data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_20 col-0_12-12" data-uib="layout/col" data-ver="0">
+              <div class="widget-container content-area vertical-col">
+                <div class="table-thing with-label widget uib_w_131 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                  <label class="narrow-control label-top-left" for="nuevaCategoria">Categorias</label>
+                  <input class="wide-control" placeholder="Nueva categoría" type="text" id="nuevaCategoria">
+                </div>
+                <a class="widget uib_w_132 d-margins bgColorButton" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnGuardarCategoria">Guardar Categoría</a>
+                <span class="uib_shim"></span>
+              </div>
+            </div>
+            <span class="uib_shim"></span>
+          </div>
+
+          <div class="grid grid-pad urow uib_row_19 row-height-19" data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_21 col-0_12-12" data-uib="layout/col" data-ver="0">
+              <div class="widget-container content-area vertical-col">
+                <div class="table-thing with-label widget uib_w_133 d-margins" data-uib="jquery_mobile/input" data-ver="0">
+                  <label class="narrow-control label-top-left" for="nuevoEstado">Estado</label>
+                  <input class="wide-control" placeholder="Nuevo estado" type="text" id="nuevoEstado">
+                </div><a class="widget uib_w_134 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnGuardarEstado">Guardar Estado</a><a class="widget uib_w_139 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button"
+                id="cerrarConfig">Cerrar</a>
+                <span class="uib_shim"></span>
+              </div>
+            </div>
+            <span class="uib_shim"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="upage caja_datos ui-page-theme-a" id="mapa" data-role="page">
+      <div data-role="header" class="container-group inner-element uib_w_21" data-uib="jquery_mobile/header" data-ver="0">
+        <div class="widget-container content-area horiz-area wrapping-col left"><a class="widget uib_w_69 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-mini="true" data-icon="bullets" id="bpanel3">Panel</a>
+
+        </div>ons
+        <div class="widget-container content-area horiz-area wrapping-col right">
+
+        </div>
+      </div>
+      <div class="upage-content ac0 content-area vertical-col" id="page_64_44">
+
+        <div class="table-thing with-label widget uib_w_85 d-margins" data-uib="jquery_mobile/textarea" data-ver="0">
+          <div id="data" border="1"></div>
+        </div>
+        <div class="widget uib_w_181 maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8" id="mapa"></div>
+      </div>
+      <!-- aqui iba el mapa -->
+      <div class="inner-element uib_w_1 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe fixed" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}" id="panel3">
+        <div class="sidebar-content content-area vertical-col">
+          <a href="#datos1" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="home">Página Principal</a>
+          <a href="#geo_datos" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="edit">Editorial</a>
+
+          <a href="#galeria" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="d" data-icon="camera">Galerias</a>
+          <a href="#upload" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="d" data-icon="bullets">Datos</a>
+          <a class="widget uib_w_70 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="arrow-l" id="cerrar3">Cerrar</a>
+        </div>
+      </div>
+    </div>
+    <div class="upage ui-page-theme-a" id="galeria" data-role="page">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_30" data-uib="jquery_mobile/header" data-ver="0">
+          <h1></h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"><a class="widget uib_w_71 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="bullets" id="bpanel4">Panel</a>
+
+          </div>
+          <div class="widget-container content-area horiz-area wrapping-col right">
+            <a class="widget uib_w_47 d-margins cargar_imagenes" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="grid" id="cuadros">C</a><a class="widget uib_w_41 d-margins" data-uib="jquery_mobile/button" data-ver="0"
+            data-role="button" data-icon="recycle" id="cargar">Cargar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="widget uib_w_37 ui-content no_wrap outset-margin d-margins caja_datos" data-uib="jquery_mobile/listview" data-ver="0" id="imagenes1">
+        <ul data-role="listview" id="galeria_fotos">
+          <li class="widget uib_w_38" data-uib="jquery_mobile/listitem" data-ver="0">
+            <h2>En espera...</h2>
+            <p><strong>Presiona cargar para viualizar 
+            </strong>
+            </p>
+            <p>las fotos almacenadas en el servidor</p>
+          </li>
+        </ul>
+      </div>
+      <div class="inner-element uib_w_1 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe fixed" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}" id="panel4">
+        <div class="sidebar-content content-area vertical-col">
+          <a href="#datos1" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="home">Página Principal</a>
+          <a href="#geo_datos" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="edit">Editorial</a>
+          <a href="#upload" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="d" data-icon="bullets">Datos</a>
+          <a class="widget uib_w_72 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="arrow-l" id="cerrar4">Cerrar</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="upage ui-page-theme-a" id="bigImg" data-role="page">
+
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_55" data-uib="jquery_mobile/header" data-ver="0">
+          <h1></h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"><a class="widget uib_w_73 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="bullets" id="bpanel5">Panel</a>
+          </div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_73_43">
+          <div class="widget uib_w_54 scale-image d-margins caja_datos" data-uib="media/img" data-ver="0">
+            <figure class="figure-align">
+              <picture>
+                <!--<source media="(min-width: 64em)" src="high-res.jpg">
+                  <source media="(min-width: 37.5em)" src="med-res.jpg">
+                    <source src="low-res.jpg">-->
+                <img id="bigFoto" src="images/imix.png" alt="This picture loads on non-supporting browsers.">
+                <p id="name"></p>
+              </picture>
+
+              <figcaption data-position="bottom"></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="inner-element uib_w_1 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe fixed" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}" id="panel5">
+        <div class="sidebar-content content-area vertical-col">
+          <a href="#datos1" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="home">Página Principal</a>
+          <a href="#geo_datos" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="edit">Editorial</a>
+          <a href="#galeria" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="d" data-icon="camera">Galerias</a>
+          <a href="#upload" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="d" data-icon="bullets">Datos</a>
+
+          <a class="widget uib_w_74 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="cerrar5" data-icon="arrow-l">Cerrar</a>
+        </div>
+      </div>
+    </div>
+    <div class="upage ui-page-theme-a" id="cuadricula" data-role="page">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_53" data-uib="jquery_mobile/header" data-ver="0">
+          <h1></h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"><a class="widget uib_w_75 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="bullets" id="bpanel6">Panel</a>
+          </div>
+          <div class="widget-container content-area horiz-area wrapping-col right">
+          </div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_47_92">
+          <!-- aqui estaba cuadricula -->
+          <div class="card_grid widget uib_w_48 wrapping-col d-margins flex-basis-48 caja_datos" data-uib="layout/card_grid" data-ver="0" id="gridCuadros">
+            <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_49 section-dimension-49 d-margins" data-uib="layout/card" data-ver="0"></div>
+            <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_50 section-dimension-50" data-uib="layout/card" data-ver="0"></div>
+            <div class="widget widget-container content-area vertical-col uib-card uib_w_51 section-dimension-51 cpad-0 d-margins" data-uib="layout/card" data-ver="0"></div>
+            <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_52 section-dimension-52" data-uib="layout/card" data-ver="0"></div>
+          </div>
+        </div>
+      </div>
+      <div class="inner-element uib_w_1 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe fixed" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}" id="panel6">
+        <div class="sidebar-content content-area vertical-col">
+          <a href="#datos1" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="home">Página Principal</a>
+          <a href="#geo_datos" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="b" data-icon="edit">Editorial</a>
+          <a href="#galeria" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="d" data-icon="camera">Galerias</a>
+          <a href="#upload" class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-theme="d" data-icon="bullets">Datos</a>
+          <a class="widget uib_w_76 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="arrow-l" id="cerrar6">Cerrar</a>
+        </div>
+      </div>
+    </div>
+    <div class="upage ui-page-theme-a" id="configuracion" data-role="page">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_55" data-uib="jquery_mobile/header" data-ver="0" data-position="fixed">
+          <h1>CONFIGURACION</h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"><a class="widget uib_w_73 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" data-icon="bullets" id="bpanel7">Panel</a>
+          </div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_84_24">
+
+          <div class="grid grid-pad urow uib_row_20 row-height-20" data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_25 col-0_12-12" data-uib="layout/col" data-ver="0">
+              <div class="widget-container content-area vertical-col">
+                <div class="sbs-container widget uib_w_155 d-margins sideCodName sbsConfigBg" data-uib="layout/side_by_side" data-ver="0">
+                  <div class="leftContent widget-container">
+                    <div class="table-thing with-label widget uib_w_160 d-margins idWidth" data-uib="jquery_mobile/input" data-ver="0">
+                      <label class="narrow-control label-top-left" for="idConfig">ID</label>
+                      <input class="wide-control" type="text" id="idConfig" readonly="">
+                      <input class="wide-control" type="text" id="catAct" style="display:none">
+                      <input class="wide-control" type="text" id="catOrder" style="display:none" value="0">
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="rightContent widget-container">
+                    <div class="table-thing with-label widget uib_w_161 d-margins nameConfig nameConfigMargin" data-uib="jquery_mobile/input" data-ver="0">
+                      <label class="narrow-control label-top-left" for="nombreConfig">Nombre</label>
+                      <input class="wide-control" type="text" id="nombreConfig">
+                    </div>
+                  </div>
+                </div>
+                <div class="uib-button-bar default-button-bar-height widget uib_w_156 d-margins" data-uib="media/button_bar" data-ver="0">
+
+                  <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_164" data-uib="media/graphic_button" data-ver="0" href="#" id="btnCargarDatos0">
+                    <img src="images/editor/cargar0.png">
+
+                    <span class="uib-caption"></span>
+                  </a>
+                  <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_158 media-button-text-bottom" data-uib="media/graphic_button" data-ver="0" href="#" id="btnBorrarConfig">
+                    <img src="images/editor/borrar.png">
+                    <span class="uib-caption"> </span>
+                  </a>
+                  <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_174" data-uib="media/graphic_button" data-ver="0" href="#" id="btnColorCatEst">
+                    <img src="images/editor/colores.png">
+
+                    <span class="uib-caption"></span>
+                  </a>
+                  <a class="uib-graphic-button default-image-sizing hover-graphic-button active-graphic-button default-graphic-button default-graphic-text widget uib_w_165" data-uib="media/graphic_button" data-ver="0" href="#" id="btnGuardarConfigCatEst">
+                    <img src="images/editor/guardar.png">
+
+                    <span class="uib-caption"></span>
+                  </a>
+
+                </div>
+                <span class="uib_shim"></span>
+              </div>
+            </div>
+            <span class="uib_shim"></span>
+          </div>
+
+          <div data-role="collapsible-set" class="no_wrap widget uib_w_141 d-margins" data-uib="jquery_mobile/accordion" data-ver="0" data-collapsed-icon="plus" data-expanded-icon="minus" id="configuraciones">
+            <div data-role="collapsible" class="no_wrap widget uib_w_142" data-uib="jquery_mobile/collapsible" data-ver="0">
+              <h4>Categorías</h4>
+              <div class="col uib_col_22 single-col" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="widget uib_w_151 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+                    <ul data-role="listview" id="listaCategoriasResp" style="display:none">
+                      <li class="widget uib_w_152" data-uib="jquery_mobile/listitem" data-ver="0"><span></span> 
+                      </li>
+                    </ul>
+                    <ul data-role="listview" id="listaCategorias">
+
+                    </ul>
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+            </div>
+            <div data-role="collapsible" class="no_wrap widget uib_w_143" data-uib="jquery_mobile/collapsible" data-ver="0">
+              <h4>Estados</h4>
+              <div class="col uib_col_23 single-col" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="widget uib_w_151 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+                    <ul data-role="listview" id="listaEstadosResp" style="display:none">
+                      <li class="widget uib_w_152" data-uib="jquery_mobile/listitem" data-ver="0"><span></span>
+                      </li>
+                    </ul>
+                    <ul data-role="listview" id="listaEstados">
+
+                    </ul>
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+            </div>
+            <div data-role="collapsible" class="no_wrap widget uib_w_144" data-uib="jquery_mobile/collapsible" data-ver="0">
+              <h4>Notas</h4>
+              <div class="col uib_col_24 single-col" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="widget uib_w_151 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+                    <ul data-role="listview" id="listaNotasResp" style="display:none">
+                      <li class="widget uib_w_152" data-uib="jquery_mobile/listitem" data-ver="0"><span></span>
+                      </li>
+                    </ul>
+                    <ul data-role="listview" id="listaNotas">
+
+                    </ul>
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-element uib_w_145 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}" id="panelConfiguracion">
+          <div class="sidebar-content content-area vertical-col">
+
+            <a class="widget uib_w_146 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnEditorialConfig">Editorial</a><a class="widget uib_w_147 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button"
+            id="cerrarPanelConfig">Cerrar</a>
+            <div class="table-thing with-label widget uib_w_182 d-margins" data-uib="jquery_mobile/select" data-ver="0">
+              <label class="narrow-control label-top-left">Prefijo</label>
+              <div data-role="fieldgroup" class="wide-control">
+                <select id="id_prefix" onclick="select_prefix(this.value)">
+                  <option value="imix">Imix Digital</option>
+                  <option value="rse">Responsabilidad Social</option>
+                  <option value="mary">Literario</option>
+                  <option value="nan">T&eacute;cnico</option>
+                    <option value="movie">Cine</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-element uib_w_175 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':300, 'side':'left', 'dur':200}" id="colorCatEstPanel">
+          <div class="sidebar-content content-area vertical-col">
+
+            <div class="grid grid-pad urow uib_row_12 row-height-12" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_13 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col" id="colorBoxCat">
+
+                  <div class="table-thing with-label widget uib_w_124 widthColorat d-margins MarginCategoEstado" data-uib="jquery_mobile/input" data-ver="0">
+                    <label class="narrow-control" for="boxColorCatEst"></label>
+                    <input class="wide-control" type="text" id="boxColorCatEst" readonly="" value="Color Fondo">
+                  </div>
+                  <div class="table-thing with-label no_wrap widget uib_w_178 d-margins" data-uib="jquery_mobile/radio_button_group" data-ver="0" id="catColorGroup">
+                    <label class="narrow-control"></label>
+                    <fieldset data-role="controlgroup" class="widget-container wide-control uib-jqm-flex" data-child-name="catColor" data-type="horizontal">
+                      <div class="ui-radio widget uib_w_179" data-uib="jquery_mobile/radio_button" data-ver="0">
+                        <label>Fondo
+                          <input type="radio" name="catColor" data-theme="a" data-iconpos="right" id="catColorFondo">
+                        </label>
+                      </div>
+                      <div class="ui-radio widget uib_w_180" data-uib="jquery_mobile/radio_button" data-ver="0">
+                        <label>Texto
+                          <input type="radio" name="catColor" data-iconpos="right" id="catColorTexto">
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+
+            <div class="grid grid-pad urow uib_row_13 row-height-13" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_14 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="center">
+                    <canvas id="colorCatEstPick" width="250" height="220"></canvas>
+                  </div>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+
+            <div class="grid grid-pad urow uib_row_14 row-height-14" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_15 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col"><a class="widget uib_w_109 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="closeColorCatEstPickerBox">Cerrar</a>
+                  <span class="uib_shim"></span>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
